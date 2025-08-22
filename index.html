@@ -3,9 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- DaisyUi cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Payoo</title>
   </head>
-  <body></body>
+  <body>
+    <section class="flex justify-center items-center h-screen">
+      <section
+        class="flex flex-col justify-center items-center bg-[#F4F5F7] w-[450px] h-[932px]"
+      >
+        <div
+          class="flex flex-col items-center bg-[url(./assets/bg.png)] bg-no-repeat w-[316px] h-[100px]"
+        >
+          <img src="/assets/Group.png" alt="logo" />
+        </div>
+
+        <form
+          class="flex flex-col justify-start self-stretch gap-[16px] bg-white m-[24px] p-[32px] rounded-[24px]"
+          action=""
+        >
+          <div>
+            <label
+              class="font-semibold text-[16px] text-black label-font"
+              for="phone"
+              >Mobile Number</label
+            >
+            <br />
+            <input
+              class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full font-semibold text-[16px] text-black label-font"
+              type="text"
+              title="phone"
+              id="phone"
+              placeholder="Enter your mobile number"
+            />
+          </div>
+          <div>
+            <label
+              class="font-semibold text-[16px] text-black label-font"
+              for="phone"
+              >Pin</label
+            >
+            <br />
+            <input
+              class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full font-semibold text-[16px] text-black label-font"
+              type="text"
+              title="phone"
+              id="phone"
+              placeholder="Enter your Pin"
+            />
+          </div>
+          <button
+            class="bg-[#0874F2] hover:bg-blue-500 mt-[10px] px-[20px] py-[14px] rounded-[32px] font-semibold text-white text-lg"
+            type="submit"
+          >
+            Login
+          </button>
+        </form>
+      </section>
+    </section>
+  </body>
 </html>
