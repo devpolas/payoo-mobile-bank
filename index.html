@@ -15,58 +15,170 @@
     <title>Payoo</title>
   </head>
   <body>
-    <section class="flex justify-center items-center h-screen">
-      <section
-        class="flex flex-col justify-center items-center bg-[#F4F5F7] w-[450px] h-[932px]"
-      >
-        <div
-          class="flex flex-col items-center bg-[url(./assets/bg.png)] bg-no-repeat w-[316px] h-[100px]"
+    <section id="register-section" class="hidden">
+      <section class="flex justify-center items-center h-screen">
+        <section
+          class="flex flex-col justify-center items-center bg-[#F4F5F7] w-[450px] h-[932px]"
         >
-          <img src="/assets/Group.png" alt="logo" />
-        </div>
-
-        <form
-          class="flex flex-col justify-start self-stretch gap-[16px] bg-white m-[24px] p-[32px] rounded-[24px]"
-          action=""
-        >
-          <div>
-            <label
-              class="font-semibold text-[16px] text-black label-font"
-              for="phone"
-              >Mobile Number</label
-            >
-            <br />
-            <input
-              class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full font-semibold text-[16px] text-black label-font"
-              type="text"
-              title="phone"
-              id="phone"
-              placeholder="Enter your mobile number"
-            />
-          </div>
-          <div>
-            <label
-              class="font-semibold text-[16px] text-black label-font"
-              for="phone"
-              >Pin</label
-            >
-            <br />
-            <input
-              class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full font-semibold text-[16px] text-black label-font"
-              type="text"
-              title="phone"
-              id="phone"
-              placeholder="Enter your Pin"
-            />
-          </div>
-          <button
-            class="bg-[#0874F2] hover:bg-blue-500 mt-[10px] px-[20px] py-[14px] rounded-[32px] font-semibold text-white text-lg"
-            type="submit"
+          <div
+            class="flex flex-col items-center bg-[url(./assets/bg.png)] bg-no-repeat w-[316px] h-[100px]"
           >
-            Login
-          </button>
-        </form>
+            <img src="/assets/Group.png" alt="logo" />
+          </div>
+
+          <form
+            class="flex flex-col justify-start self-stretch gap-[16px] bg-white m-[24px] p-[32px] rounded-[24px]"
+          >
+            <div>
+              <label
+                class="font-semibold text-[16px] text-black label-font"
+                for="phone"
+                >Mobile Number</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="phone"
+                id="phone"
+                placeholder="Enter your mobile number"
+              />
+            </div>
+            <div>
+              <label
+                class="font-semibold text-[16px] text-black label-font"
+                for="phone"
+                >Pin</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="password"
+                title="phone"
+                id="password"
+                placeholder="Enter your 4-Digit Pin"
+              />
+            </div>
+            <div>
+              <label
+                class="font-semibold text-[16px] text-black label-font"
+                for="phone"
+                >Confirm Pin</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="password"
+                title="phone"
+                id="passwordConfirm"
+                placeholder="Enter your 4-Digit Pin"
+              />
+            </div>
+            <p
+              id="registerValidation"
+              class="hidden font-normal text-[16px] text-red-600 label-font"
+            >
+              Invalid Input! Try Again?
+            </p>
+            <button
+              id="register"
+              class="bg-[#0874F2] hover:bg-blue-500 mt-[10px] px-[20px] py-[14px] rounded-[32px] w-full font-semibold text-white text-lg hover:cursor-pointer"
+            >
+              Register
+            </button>
+            <p
+              class="font-normal text-[16px] text-black text-center label-font"
+            >
+              Already have an account?
+            </p>
+            <button
+              id="go-login"
+              class="font-bold text-blue-500 text-lg hover:cursor-pointer"
+            >
+              login
+            </button>
+          </form>
+        </section>
       </section>
     </section>
+
+    <section id="login-section" class="">
+      <section class="flex justify-center items-center h-screen">
+        <section
+          class="flex flex-col justify-center items-center bg-[#F4F5F7] w-[450px] h-[932px]"
+        >
+          <div
+            class="flex flex-col items-center bg-[url(./assets/bg.png)] bg-no-repeat w-[316px] h-[100px]"
+          >
+            <img src="/assets/Group.png" alt="logo" />
+          </div>
+
+          <form
+            class="flex flex-col justify-start self-stretch gap-[16px] bg-white m-[24px] p-[32px] rounded-[24px]"
+          >
+            <div>
+              <label
+                class="font-semibold text-[16px] text-black label-font"
+                for="phone"
+                >Mobile Number</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="phone"
+                id="phone"
+                placeholder="Enter your mobile number"
+              />
+            </div>
+            <div>
+              <label
+                class="font-semibold text-[16px] text-black label-font"
+                for="phone"
+                >Pin</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="password"
+                title="phone"
+                id="phone"
+                placeholder="Enter your 4-Digit Pin"
+              />
+            </div>
+            <p
+              id="loginValidation"
+              class="hidden font-normal text-[16px] text-red-600 label-font"
+            >Invalid Input! Try Again?</p>
+              <button
+                id="login"
+                class="bg-[#0874F2] hover:bg-blue-500 mt-[10px] px-[20px] py-[14px] rounded-[32px] w-full font-semibold text-white text-lg hover:cursor-pointer"
+              >
+                Login
+              </button>
+            </p>
+
+            <p
+              class="font-normal text-[16px] text-black text-center label-font"
+            >
+              Create a New Account?
+            </p>
+            <button
+              id="go-register"
+              class="font-bold text-blue-500 text-lg hover:cursor-pointer"
+            >
+              Register
+            </button>
+          </form>
+        </section>
+      </section>
+    </section>
+    <!-- connect to javascript -->
+    <script src="/js/index.js"></script>
   </body>
 </html>
