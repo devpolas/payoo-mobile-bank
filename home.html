@@ -15,11 +15,9 @@
     <title>Payoo</title>
   </head>
   <body>
-    <section class="flex justify-center items-center h-screen">
-      <section
-        class="flex flex-col justify-center items-center bg-[#FFFFFF] w-[450px] h-[932px]"
-      >
-        <section class="w-full h-[500px]">
+    <section class="flex justify-center h-screen">
+      <section class="flex flex-col bg-[#F4F5F7] w-[450px] h-screen">
+        <section class="bg-white rounded-b-2xl w-full">
           <div
             class="flex flex-row justify-between border-gray-200 border-b-2 h-[64px]"
           >
@@ -36,14 +34,14 @@
               Logout
             </button>
           </div>
-          <div class="p-6 h-[94px]">
+          <div class="p-4 h-[94px]">
             <h1 class="font-bold text-2xl label-font">❤️‍🔥 Welcome to Payoo!</h1>
             <p class="mt-3 text-[16px] text-gray-500 lebal-font">
               Enjoy easy and convenient financial services with us. Cash out
               charge is low and
             </p>
           </div>
-          <div class="gap-4 grid grid-cols-3 mt-6 mb-6 p-6 h-[220px]">
+          <div class="gap-4 grid grid-cols-3 mt-4 mb-4 p-6 h-[220px]">
             <div
               class="flex flex-col justify-center items-center border-1 border-gray-200 rounded-2xl w-[120px] h-[90px]"
             >
@@ -98,7 +96,284 @@
             </div>
           </div>
         </section>
-        <section class="bg-[#F4F5F7] w-full h-full"></section>
+        <section class="bg-[#F4F5F7] p-4 w-full">
+          <div id="get-bonus" class="hidden">
+            <h2 class="mb-4 font-semibold text-gray-900 text-lg label-font">
+              Get Bonus
+            </h2>
+            <div class="bg-white p-6 rounded-2xl">
+              <label
+                class="mb-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="Coupon"
+                >Enter Bonus Coupon</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="coupon"
+                placeholder="Enter your coupon"
+              />
+              <button
+                id="bounus"
+                class="bg-[#0874F2] hover:bg-blue-500 mt-2 px-[20px] py-[14px] rounded-[32px] w-full font-semibold text-white text-lg hover:cursor-pointer"
+              >
+                Get Bonus
+              </button>
+            </div>
+          </div>
+
+          <div id="transfer-money" class="hidden">
+            <h2 class="mb-4 font-semibold text-gray-900 text-lg label-font">
+              Transfer Money
+            </h2>
+            <div class="bg-white p-6 rounded-2xl">
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="ac"
+                >User Account Number</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="ac"
+                placeholder="Enter 11 digit number"
+              />
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="amount"
+                >Amount</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="amount"
+                placeholder="Enter amount to transfer"
+              />
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="pin"
+                >Pin Number</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="password"
+                title="pin"
+                placeholder="Enter 4 digit pin number"
+              />
+              <button
+                id="transfer"
+                class="bg-[#0874F2] hover:bg-blue-500 mt-2 px-[20px] py-[14px] rounded-[32px] w-full font-semibold text-white text-lg hover:cursor-pointer"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+
+          <div id="add-money" class="hidden">
+            <h2 class="mb-4 font-semibold text-gray-900 text-lg label-font">
+              Add Money
+            </h2>
+            <div class="bg-white p-6 rounded-2xl">
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="bank"
+                >Select A Bank</label
+              >
+              <br />
+              <select
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[14px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black appearance-none label-font"
+                name="bank"
+                id="bank"
+              >
+                <option class="hidden" value="default">Select Bank</option>
+                <option value="ab-bank">AB Bank</option>
+                <option value="bangladesh-bank">Bangladesh Bank</option>
+                <option value="ebl">Eastern Bank PLC.</option>
+              </select>
+              <br />
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="ac"
+                >Bank Account Number</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[14px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="ac"
+                placeholder="Enter 11 digit number"
+              />
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="amount"
+                >Amount</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[14px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="amount"
+                placeholder="Enter amount to transfer"
+              />
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="pin"
+                >Pin Number</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[14px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="password"
+                title="pin"
+                placeholder="Enter 4 digit pin number"
+              />
+
+              <button
+                id="add"
+                class="bg-[#0874F2] hover:bg-blue-500 mt-2 px-[20px] py-[14px] rounded-[32px] w-full font-semibold text-white text-lg hover:cursor-pointer"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+
+          <div id="withdraw-money" class="hidden">
+            <h2 class="mb-4 font-semibold text-gray-900 text-lg label-font">
+              Cash Out
+            </h2>
+            <div class="bg-white p-6 rounded-2xl">
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="an"
+                >Agent Number</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="an"
+                placeholder="Enter 11 digit number"
+              />
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="amount"
+                >Amount</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="amount"
+                placeholder="Enter amount to withdraw"
+              />
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="pin"
+                >Pin Number</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[16px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="password"
+                title="pin"
+                placeholder="Enter 4 digit pin number"
+              />
+
+              <button
+                id="withdraw"
+                class="bg-[#0874F2] hover:bg-blue-500 mt-2 px-[20px] py-[14px] rounded-[32px] w-full font-semibold text-white text-lg hover:cursor-pointer"
+              >
+                Withdraw
+              </button>
+            </div>
+          </div>
+
+          <div id="pay-bill" class="hidden">
+            <h2 class="mb-2 font-semibold text-gray-900 text-lg label-font">
+              Pay Bill
+            </h2>
+            <div class="bg-white p-6 rounded-2xl">
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="bill"
+                >Select to Pay</label
+              >
+              <br />
+              <select
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[14px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black appearance-none label-font"
+                name="bill"
+                id="bill"
+              >
+                <option class="hidden" value="default">Select Bill</option>
+                <option value="electricity">Electricity</option>
+                <option value="wifi">Wifi</option>
+                <option value="gas">Gas</option>
+                <option value="telephone">Telephone</option>
+              </select>
+              <br />
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="ac"
+                >Biller Account Number</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[14px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="ac"
+                placeholder="Enter 11 digit number"
+              />
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="amount"
+                >Amount</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[14px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="text"
+                title="amount"
+                placeholder="Enter amount to transfer"
+              />
+              <label
+                class="my-2 font-semibold text-[16px] text-gray-700 label-font"
+                for="pin"
+                >Pin Number</label
+              >
+              <br />
+              <input
+                required
+                class="bg-[#F4F5F7] mt-[10px] px-[20px] py-[14px] border-0 rounded-[32px] outline-0 focus:outline-0 w-full text-[16px] text-black label-font"
+                type="password"
+                title="pin"
+                placeholder="Enter 4 digit pin number"
+              />
+
+              <button
+                id="pay"
+                class="bg-[#0874F2] hover:bg-blue-500 mt-2 px-[20px] py-[14px] rounded-[32px] w-full font-semibold text-white text-lg hover:cursor-pointer"
+              >
+                Pay Now
+              </button>
+            </div>
+          </div>
+        </section>
       </section>
     </section>
 
